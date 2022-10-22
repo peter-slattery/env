@@ -121,7 +121,7 @@ Multiple OSes represented in one file
 ////////////////////////////////////////////////////////
 // DO INCLUDES FOR ME
 
-#if defined(ENV_DO_SYSTEM_INCLUDES)
+#if !defined(ENV_DONT_DO_SYSTEM_INCLUDES)
 // Common
 #  include <stdint.h>
 #  include <stdio.h>
@@ -129,6 +129,7 @@ Multiple OSes represented in one file
 #  include <errno.h>
 #  include <math.h>
 #  include <time.h>
+#  include <unistd.h>
 
 // Per-OS Includes
 #  if ENV_OS_WINDOWS
